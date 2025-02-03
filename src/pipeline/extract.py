@@ -1,7 +1,8 @@
-import os
 import glob
+import os
 
 import pandas as pd
+
 
 def extract_from_excels_folder(path: list[str]) -> list[pd.DataFrame]: 
   """
