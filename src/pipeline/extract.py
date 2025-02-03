@@ -3,7 +3,7 @@ import glob
 
 import pandas as pd
 
-def extract_from_excels_folder(*path: list[str]) -> list[pd.DataFrame]: 
+def extract_from_excels_folder(path: list[str]) -> list[pd.DataFrame]: 
   """
   função para ler os arquivos de uma pasta em path e retornar uma lista de DataFrames
 
@@ -19,5 +19,5 @@ def extract_from_excels_folder(*path: list[str]) -> list[pd.DataFrame]:
   return dataframes
 
 if __name__ == '__main__':
-  dataframes = extract_from_excels_folder('data', 'input')
+  dataframes = extract_from_excels_folder(path=['data', 'input'])
   print(dataframes)
