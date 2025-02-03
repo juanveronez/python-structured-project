@@ -13,3 +13,17 @@ Outro problema comum quando lidamos com projetos Python é criarmos projetos em 
 
 **Para definir a versão do Python e criar um venv inicial (OBRIGATÓRIO!)**:
 `poetry env use <version>`
+
+# 3 GIT e GitHub
+
+O uso de ferramentas de versionamento é algo excencial para conseguir ter o controle do projeto, do desenvolvimento do que foi feito e ter uma organização melhor. Importante notar que o GIT funciona bem para arquivos de texto, como arquivos com código, não arquivos binários.
+
+Além disso, ferramentas como GitHub são serviços de "hospedagem" de projetos GIT, quase como um YouTube, que é usado para hospedar vídeos.
+
+Além disso, podemos usar ferramentas de CI/CD para que os projetos controlados no Git sejam integrados de forma mais simples e tenham menos chance de falha ao ocorrerem atualizações, isso pode ser feito por Hooks.
+
+## .gitignore
+
+Um dos pontos comuns em projetos que usam git é termos arquivos que não queremos que sejam salvos no git, seja por seu tamanho ou por não serem necessários, para isso criamos o GitIgnore.
+
+Porém, como criá-lo na mão pode ser complexo podemos usar ferramentas como o [gitignore.io](https://www.toptal.com/developers/gitignore), que já nos trás uma lista pronta, com base na tecnologia utilizada (por exemplo, Python).
