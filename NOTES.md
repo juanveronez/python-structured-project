@@ -62,3 +62,41 @@ run = "python src"
 lint = "isort . && blue ."
 test = "pytest -v "
 ```
+
+## 4. Documentação (MKDocs)
+
+Uma documentação trás mais profissionalismo ao projeto e clareza sobre a composição do projeto.
+
+Quando criamos a doc com o MKDocs conseguimos criar uma doc mais robusta, como uma aplicação a parte que pode ser publicada e ficar pública ou privada (a depender da necessidade).
+
+Quando precisamos mapear as funcionalidades do projeto podemos usar o `mkdocstrings`, usado para referenciar as funções ou classes da aplicação.
+
+Sempre importante lembrar que o mkdocs usa MD, sendo uma estrutura simples de ser escrita.
+
+### Alguns comandos importantes
+
+- Criar uma doc nova: `mkdocs new .`
+- Subir o server com a doc: `mkdocs serve`
+- Buildar a doc: `mkdocs build`
+- Publicar a doc no GitHub Pages: `mkdocs gh-deploy`
+
+### Pluggins Úteis:
+
+- mkdocstrings-python
+- pygments
+- mkdocs-material
+- pymdown-extensions
+- mkdocs-bootstrap38
+
+### Mermaid
+
+Como o MKDocs usa MDs para criação das páginas, sendo assim estruturas como a que temos abaixo são possíveis, ou outras opções usando MD.
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+
+```
