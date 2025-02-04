@@ -2,6 +2,7 @@ site_name: ETL Excels
 nav:
   - Home: index.md
   - API: api.md
+  - Estrutura: structure.md
 plugins:
   - search
   - mkdocstrings:

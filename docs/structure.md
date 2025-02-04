@@ -77,7 +77,7 @@ Sempre importante lembrar que o mkdocs usa MD, sendo uma estrutura simples de se
 
 - Criar uma doc nova: `mkdocs new .`
 - Subir o server com a doc: `mkdocs serve`
-- Buildar a doc: `mkdocs build`
+- Buildar a doc, usado para publicar o site de outras formas: `mkdocs build`
 - Publicar a doc no GitHub Pages: `mkdocs gh-deploy`
 
 ### Pluggins Úteis:
@@ -110,3 +110,21 @@ Para isso usamos o `pre-commit`, criamos um arquivo `.pre-commit-config.yaml`, c
 Uma vez que esse processo for feito toda vez que formos fazer um commit esse hook será ativo e com ele todas as suas funções.
 
 Para rodarmos o pre-commit em todo o projeto, então analisando toda a base de código já existente usamos o `pre-commit run -a`, dessa forma garantindo a qualidade da code base.
+
+## 6. CI (GitHub Actions)
+
+O processo de CI garante que o código seja validado durante o processo de integração, dessa forma agilizando alguns testes que garantem a qualidade de código. Esse processo pode ser atrelado a ações no repositório, como **push, pull_request**.
+
+Com isso garantimos uma qualidade maior no código que está no repositório.
+
+Para usarmos o GH Actions criamos um arquivo `.yml` dentro de uma pasta `.github/workflows`. Com isso garantimos uma série de steps que será feito em uma máquina virtual garantindo que o código esteja com qualidade.
+
+## README
+
+O README não é um pré-requisito em projetos, mas sim uma ótima prática para podermos passar informações sobre o projeto. Alguns dos pontos mais importantes para um README são:
+
+- Descrição do projeto e motivador.
+- Processo de Setup
+- Principais comandos do projeto
+- Documentação, ou link para documentação (em caso da doc hospedada)
+- Contato.
