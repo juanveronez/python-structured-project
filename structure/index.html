@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Estrutura - ETL Excels</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">ETL Excels</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../api/" class="nav-link">API</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Estrutura</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../api/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ambiente-de-desenvolvimento" class="nav-link">Ambiente de Desenvolvimento</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-python-version-pyenv" class="nav-link">1. Python Version (Pyenv)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-project-env-poetry" class="nav-link">2. Project ENV (Poetry)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-git-e-github" class="nav-link">3. GIT e GitHub</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#qualidade-de-codigo" class="nav-link">Qualidade de Código</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-testes-pytest" class="nav-link">1. Testes (pytest)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-padroes-de-projeto-ex-isort-blue-e-pydocstyle" class="nav-link">2. Padrões de Projeto (Ex: ISort, Blue e Pydocstyle)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-tarefas-taskipy" class="nav-link">3. Tarefas (Taskipy)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-documentacao-mkdocs" class="nav-link">4. Documentação (MKDocs)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-git-hooks-pre-commit" class="nav-link">5. Git Hooks (Pre-commit)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-ci-github-actions" class="nav-link">6. CI (GitHub Actions)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#readme" class="nav-link">README</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ambiente-de-desenvolvimento">Ambiente de Desenvolvimento</h1>
+<h2 id="1-python-version-pyenv">1. Python Version (<code>Pyenv</code>)</h2>
+<p>A versão do Python é um dos primeiros pontos importantes de se notar quando estamos começando um projeto ou assumindo um projeto legado. Principalmente pelo fato de que o Python só se compromete a fazer correções de 3 versões anteriores ex: (3.12 (atual), 3.11 e 3.10), <strong>sendo assim um projeto anterior pode apresentar riscos de vulnerabilidades!</strong></p>
+<p>Para garantir a versão do Python o ideal é termos um arquivo <code>.python-version</code> no projeto, o ideal é usar uma solução de Env como <code>pyenv</code> para isso.</p>
+<h2 id="2-project-env-poetry">2. Project ENV (<code>Poetry</code>)</h2>
+<p>Outro problema comum quando lidamos com projetos Python é criarmos projetos em que dependências podem variar dependendo do desenvolvedor, ou ainda, um mesmo desenvolvedor lidar com projetos distintos. Porém, podemos fazer isso apenas usando <code>venv</code>, ou usando soluções mais complexas como o <strong>Poetry</strong>. Atualmente, o mais usado é o Poetry pois ele facilita o setup de projetos e torna sua estrutura mais concisa.</p>
+<p><strong>Para iniciar um projeto com Poetry</strong>:
+<code>poetry init</code></p>
+<p><strong>Para definir a versão do Python e criar um venv inicial (OBRIGATÓRIO!)</strong>:
+<code>poetry env use &lt;version&gt;</code></p>
+<h2 id="3-git-e-github">3. GIT e GitHub</h2>
+<p>O uso de ferramentas de versionamento é algo excencial para conseguir ter o controle do projeto, do desenvolvimento do que foi feito e ter uma organização melhor. Importante notar que o GIT funciona bem para arquivos de texto, como arquivos com código, não arquivos binários.</p>
+<p>Além disso, ferramentas como GitHub são serviços de "hospedagem" de projetos GIT, quase como um YouTube, que é usado para hospedar vídeos.</p>
+<p>Além disso, podemos usar ferramentas de CI/CD para que os projetos controlados no Git sejam integrados de forma mais simples e tenham menos chance de falha ao ocorrerem atualizações, isso pode ser feito por Hooks.</p>
+<h3 id="gitignore">.gitignore</h3>
+<p>Um dos pontos comuns em projetos que usam git é termos arquivos que não queremos que sejam salvos no git, seja por seu tamanho ou por não serem necessários, para isso criamos o GitIgnore.</p>
+<p>Porém, como criá-lo na mão pode ser complexo podemos usar ferramentas como o <a href="https://www.toptal.com/developers/gitignore">gitignore.io</a>, que já nos trás uma lista pronta, com base na tecnologia utilizada (por exemplo, Python).</p>
+<h1 id="qualidade-de-codigo">Qualidade de Código</h1>
+<h2 id="1-testes-pytest">1. Testes (pytest)</h2>
+<p>O conceito de testes unitários e testes de integração é algo muito importante, pois garante ao desenvolvedor segurança na hora de fazer uma implementação ou alteração em um código.</p>
+<p>Quando criamos testes unitários testamos uma funcionalidade de forma isolada e seus possíveis resultados, podendo definir uma ou mais premissas que podem ser verdadeiras.</p>
+<p>para rodar os testes usamos o <code>pytest</code>.</p>
+<p>Já testes de integração testam como diferentes pedaços de um código interagem, sendo uma solução para testar de forma mais complexa. Importante notar que devemos focar mais em testes unitários que em testes de integração, por serem mais importantes e simples de serem feitos.</p>
+<h2 id="2-padroes-de-projeto-ex-isort-blue-e-pydocstyle">2. Padrões de Projeto (Ex: ISort, Blue e Pydocstyle)</h2>
+<p>Conceito em que aderimos o projeto a alguns padrões pré-determinados e mais conhecidos, como as PEPs, usado para que o time não "perca tempo" definindo padrões que já foram definidos antes. Muitas dessas bibliotecas ainda auxiliam para que não seja necessário corrigirmos os erros, corrigindo diretamente tudo que está fora do padrão.</p>
+<p>Muitas dessas bibliotecas rodam apenas com o nome da lib, ou ainda o nome da lib e quais arquivos devem ser tocados. Como em <code>pydocstyle</code> e <code>isort .</code> (usa isort em todos os arquivos).</p>
+<h2 id="3-tarefas-taskipy">3. Tarefas (Taskipy)</h2>
+<p>Algo comum em projetos é termos diferentes comandos que precisam ser executados para situações diferentes, scripts para rodar o código, scripts de setup, scripts para testes, para documentação....</p>
+<p>O grande problema é que esses comandos podem não ser triviais, quando adicionamos uma ferramenta de tarefas simplificamos o projeto, podendo usar algo como <code>task run</code> para rodar o projeto, sem precisar se preocupar com qual arquivo deve ser executado, ou qual comando.</p>
+<p>Para isso só precisamos adicionar a biblioteca <code>taskipy</code> e criar as tasks que podem ser usadas, como por exemplo (deve ser adicionado no pyproject.toml):</p>
+<pre><code class="language-toml">[tool.taskipy.tasks]
+run = &quot;python src&quot;
+lint = &quot;isort . &amp;&amp; blue .&quot;
+test = &quot;pytest -v &quot;
+</code></pre>
+<h2 id="4-documentacao-mkdocs">4. Documentação (MKDocs)</h2>
+<p>Uma documentação trás mais profissionalismo ao projeto e clareza sobre a composição do projeto.</p>
+<p>Quando criamos a doc com o MKDocs conseguimos criar uma doc mais robusta, como uma aplicação a parte que pode ser publicada e ficar pública ou privada (a depender da necessidade).</p>
+<p>Quando precisamos mapear as funcionalidades do projeto podemos usar o <code>mkdocstrings</code>, usado para referenciar as funções ou classes da aplicação.</p>
+<p>Sempre importante lembrar que o mkdocs usa MD, sendo uma estrutura simples de ser escrita.</p>
+<h3 id="alguns-comandos-importantes">Alguns comandos importantes</h3>
+<ul>
+<li>Criar uma doc nova: <code>mkdocs new .</code></li>
+<li>Subir o server com a doc: <code>mkdocs serve</code></li>
+<li>Buildar a doc, usado para publicar o site de outras formas: <code>mkdocs build</code></li>
+<li>Publicar a doc no GitHub Pages: <code>mkdocs gh-deploy</code></li>
+</ul>
+<h3 id="pluggins-uteis">Pluggins Úteis:</h3>
+<ul>
+<li>mkdocstrings-python</li>
+<li>pygments</li>
+<li>mkdocs-material</li>
+<li>pymdown-extensions</li>
+<li>mkdocs-bootstrap38</li>
+</ul>
+<h3 id="mermaid">Mermaid</h3>
+<p>Como o MKDocs usa MDs para criação das páginas, sendo assim estruturas como a que temos abaixo são possíveis, ou outras opções usando MD.</p>
+<pre><code class="language-mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+
+</code></pre>
+<h2 id="5-git-hooks-pre-commit">5. Git Hooks (Pre-commit)</h2>
+<p>Quando queremos que o projeto mantenha certos padrões acordados uma boa saída é um git hook, esse tipo de funcionalidade faz com que funções sejam executadas toda vez que um código novo vai ser commitado.</p>
+<p>Para isso usamos o <code>pre-commit</code>, criamos um arquivo <code>.pre-commit-config.yaml</code>, configuramos esse arquivo da forma que quisermos e depois usamos o <code>pre-commit install</code> para que as configurações sejam instaladas dentro do <code>.git/hooks</code> de forma automática.</p>
+<p>Uma vez que esse processo for feito toda vez que formos fazer um commit esse hook será ativo e com ele todas as suas funções.</p>
+<p>Para rodarmos o pre-commit em todo o projeto, então analisando toda a base de código já existente usamos o <code>pre-commit run -a</code>, dessa forma garantindo a qualidade da code base.</p>
+<h2 id="6-ci-github-actions">6. CI (GitHub Actions)</h2>
+<p>O processo de CI garante que o código seja validado durante o processo de integração, dessa forma agilizando alguns testes que garantem a qualidade de código. Esse processo pode ser atrelado a ações no repositório, como <strong>push, pull_request</strong>.</p>
+<p>Com isso garantimos uma qualidade maior no código que está no repositório.</p>
+<p>Para usarmos o GH Actions criamos um arquivo <code>.yml</code> dentro de uma pasta <code>.github/workflows</code>. Com isso garantimos uma série de steps que será feito em uma máquina virtual garantindo que o código esteja com qualidade.</p>
+<h2 id="readme">README</h2>
+<p>O README não é um pré-requisito em projetos, mas sim uma ótima prática para podermos passar informações sobre o projeto. Alguns dos pontos mais importantes para um README são:</p>
+<ul>
+<li>Descrição do projeto e motivador.</li>
+<li>Processo de Setup</li>
+<li>Principais comandos do projeto</li>
+<li>Documentação, ou link para documentação (em caso da doc hospedada)</li>
+<li>Contato.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
