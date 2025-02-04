@@ -100,3 +100,13 @@ graph TD;
     C-->D;
 
 ```
+
+## 5. Git Hooks (Pre-commit)
+
+Quando queremos que o projeto mantenha certos padrões acordados uma boa saída é um git hook, esse tipo de funcionalidade faz com que funções sejam executadas toda vez que um código novo vai ser commitado.
+
+Para isso usamos o `pre-commit`, criamos um arquivo `.pre-commit-config.yaml`, configuramos esse arquivo da forma que quisermos e depois usamos o `pre-commit install` para que as configurações sejam instaladas dentro do `.git/hooks` de forma automática.
+
+Uma vez que esse processo for feito toda vez que formos fazer um commit esse hook será ativo e com ele todas as suas funções.
+
+Para rodarmos o pre-commit em todo o projeto, então analisando toda a base de código já existente usamos o `pre-commit run -a`, dessa forma garantindo a qualidade da code base.

@@ -13,13 +13,13 @@ def extract_from_excels_folder(path: list[str]) -> list[pd.DataFrame]:
     return: df_list: lista de DataFrames
     """
 
-    full_path = os.path.join(*path, '*.xlsx')
+    full_path = os.path.join(*path, "*.xlsx")
     path_files = glob.glob(full_path)
 
     dataframes = [pd.read_excel(file) for file in path_files]
     return dataframes
 
 
-if __name__ == '__main__':
-    dataframes = extract_from_excels_folder(path=['data', 'input'])
+if __name__ == "__main__":
+    dataframes = extract_from_excels_folder(path=["data", "input"])
     print(dataframes)

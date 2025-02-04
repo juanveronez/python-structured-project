@@ -17,17 +17,17 @@ repos:
     hooks:
       - id: isort
 
-  - repo: https://github.com/PyCQA/pydocstyle
-    rev: 6.3.0 # Modify this to be the version you want
-    hooks:
-      - id: pydocstyle
+  # - repo: https://github.com/PyCQA/pydocstyle
+  #   rev: 6.3.0 # Modify this to be the version you want
+  #   hooks:
+  #     - id: pydocstyle
 
-  - repo: local
-    hooks:
-      - id: pip-audit
-        name: pip-audit
-        entry: pip-audit
-        args: []
-        language: system
-        pass_filenames: false
-        types: [python] # Opcional: se você quiser que isso seja executado apenas quando arquivos Python forem alterados.
+  # - repo: local
+  #   hooks:
+  #     - id: pip-audit
+  #       name: pip-audit
+  #       entry: pip-audit
+  #       args: []
+  #       language: system
+  #       pass_filenames: false
+  #       types: [python] # Opcional: se você quiser que isso seja executado apenas quando arquivos Python forem alterados.

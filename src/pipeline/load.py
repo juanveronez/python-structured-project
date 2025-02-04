@@ -18,5 +18,5 @@ def load_to_excel(df: pd.DataFrame, filename: str, path: list[str]):
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
-    full_path = os.path.join(folder_path, f'{filename}.xlsx')
+    full_path = os.path.join(folder_path, f"{filename}.xlsx")
     df.to_excel(full_path, index=False)
